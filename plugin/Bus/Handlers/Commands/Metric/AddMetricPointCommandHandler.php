@@ -11,9 +11,9 @@
 
 namespace CachetHQ\Plugins\Metrics\Bus\Handlers\Commands\Metric;
 
+use CachetHQ\Cachet\Dates\DateFactory;
 use CachetHQ\Plugins\Metrics\Bus\Commands\Metric\AddMetricPointCommand;
 use CachetHQ\Plugins\Metrics\Bus\Events\Metric\MetricPointWasAddedEvent;
-use CachetHQ\Cachet\Dates\DateFactory;
 use CachetHQ\Plugins\Metrics\Models\MetricPoint;
 use Carbon\Carbon;
 

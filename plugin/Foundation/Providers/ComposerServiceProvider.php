@@ -11,8 +11,8 @@
 
 namespace CachetHQ\Plugins\Metrics\Foundation\Providers;
 
-use CachetHQ\Plugins\Metrics\Composers\MetricsComposer;
 use CachetHQ\Plugins\Metrics\Composers\DashboardComposer;
+use CachetHQ\Plugins\Metrics\Composers\MetricsComposer;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
 

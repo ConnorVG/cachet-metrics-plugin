@@ -62,7 +62,7 @@ class MetricPointController extends AbstractApiController
      * Updates a metric point.
      *
      * @param \CachetHQ\Plugins\Metrics\Models\Metric      $metric
-     * @param \CachetHQ\Cachet\Models\MetircPoint $metricPoint
+     * @param \CachetHQ\Plugins\Metrics\Models\MetricPoint $metricPoint
      *
      * @return \Illuminate\Http\JsonResponse
      */

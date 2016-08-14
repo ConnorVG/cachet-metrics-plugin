@@ -35,10 +35,6 @@ abstract class AbstractTestCase extends TestCase
      */
     public function createApplication()
     {
-        if (! defined('TESTING_PLUGIN_DIR')) {
-            define('TESTING_PLUGIN_DIR', realpath(dirname(__DIR__)));
-        }
-
         require __DIR__.'/../vendor/autoload.php';
 
         $app = require __DIR__.'/../vendor/cachethq/cachet/bootstrap/app.php';

@@ -15,6 +15,8 @@ define('CACHET_VERSION', trim(file_get_contents(__DIR__.'/../vendor/cachethq/cac
 
 define('PLUGIN_VERSION', trim(file_get_contents(__DIR__.'/../VERSION')));
 
+define('TESTING_PLUGIN_DIR', realpath(dirname(__DIR__)));
+
 /*
 |--------------------------------------------------------------------------
 | Register The Composer Auto Loader
