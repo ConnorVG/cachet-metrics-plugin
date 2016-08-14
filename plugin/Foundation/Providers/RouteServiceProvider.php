@@ -65,9 +65,9 @@ class RouteServiceProvider extends ServiceProvider
     public function map(Router $router)
     {
         $router->group(['namespace' => $this->namespace], function (Router $router) {
-            $path = plugin_path(true, 'connorvg', 'cachet-metrics-plugin');
+            $path = dirname(dirname(__DIR__)).'/Http/Routes/*.php';
 
-            foreach (glob($path.'/plugin/Http/Routes/*.php') as $file) {
+            foreach (glob($path) as $file) {
                 $this->app->make('CachetHQ\\Plugins\\Metrics\\Http\\Routes\\'.basename($file, '.php'))->map($router);
             }
         });
