@@ -14,7 +14,11 @@ return [
     */
 
     'providers' => [
+        'CachetHQ\Plugins\Metrics\Foundation\Providers\ComposerServiceProvider',
         'CachetHQ\Plugins\Metrics\Foundation\Providers\RepositoryServiceProvider',
+        'CachetHQ\Plugins\Metrics\Foundation\Providers\RouteServiceProvider',
+        'CachetHQ\Plugins\Metrics\Foundation\Providers\TranslatorServiceProvider',
+        'CachetHQ\Plugins\Metrics\Foundation\Providers\ViewServiceProvider',
     ],
 
 ];

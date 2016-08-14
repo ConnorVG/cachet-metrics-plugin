@@ -11,22 +11,19 @@
 
 namespace CachetHQ\Plugins\Metrics\Foundation\Providers;
 
-use CachetHQ\Plugins\Metrics\Composers\MetricsComposer;
-use CachetHQ\Plugins\Metrics\Composers\DashboardComposer;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Translation\Translator;
 
-class ComposerServiceProvider extends ServiceProvider
+class TranslatorServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
      *
-     * @param \Illuminate\Contracts\View\Factory $factory
+     * @param \Illuminate\Translation\Translator $translator
      */
-    public function boot(Factory $factory)
+    public function boot(Translator $translator)
     {
-        $factory->composer(['index'], MetricsComposer::class);
-        $factory->composer('layout.dashboard', DashboardComposer::class);
+        $translator->addNamespace('connorvg/cachet-metrics-plugin', plugin_path(true, 'connorvg', 'cachet-metrics-plugin').'/resources/lang');
     }
 
     /**
@@ -36,6 +33,6 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // ...
     }
 }

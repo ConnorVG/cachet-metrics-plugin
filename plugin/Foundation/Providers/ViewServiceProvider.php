@@ -11,12 +11,10 @@
 
 namespace CachetHQ\Plugins\Metrics\Foundation\Providers;
 
-use CachetHQ\Plugins\Metrics\Composers\MetricsComposer;
-use CachetHQ\Plugins\Metrics\Composers\DashboardComposer;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
 
-class ComposerServiceProvider extends ServiceProvider
+class ViewServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
@@ -25,8 +23,7 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot(Factory $factory)
     {
-        $factory->composer(['index'], MetricsComposer::class);
-        $factory->composer('layout.dashboard', DashboardComposer::class);
+        $factory->addNamespace('connorvg/cachet-metrics-plugin', plugin_path(true, 'connorvg', 'cachet-metrics-plugin').'/resources/views');
     }
 
     /**
@@ -36,6 +33,6 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // ...
     }
 }
