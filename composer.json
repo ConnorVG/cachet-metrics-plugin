@@ -23,9 +23,6 @@
         }
     ],
     "autoload": {
-        "classmap": [
-            "database"
-        ],
         "psr-4": {
             "CachetHQ\\Plugins\\Metrics\\": "plugin/"
         }
