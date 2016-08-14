@@ -11,9 +11,9 @@
 
 namespace CachetHQ\Plugins\Metrics\Bus\Handlers\Commands\Metric;
 
+use CachetHQ\Cachet\Dates\DateFactory;
 use CachetHQ\Plugins\Metrics\Bus\Commands\Metric\UpdateMetricPointCommand;
 use CachetHQ\Plugins\Metrics\Bus\Events\Metric\MetricPointWasUpdatedEvent;
-use CachetHQ\Cachet\Dates\DateFactory;
 
 class UpdateMetricPointCommandHandler
 {
