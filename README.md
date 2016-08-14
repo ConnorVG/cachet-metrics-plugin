@@ -1,9 +1,9 @@
 # Cachet Metrics Plugin
 
 [![StyleCI](https://styleci.io/repos/65662955/shield)](https://styleci.io/repos/65662955/)
-[![Build Status](https://img.shields.io/travis/ConnorVG/Cachet-Demo-Plugin/2.4.svg?style=flat-square)](https://travis-ci.org/ConnorVG/Cachet-Demo-Plugin)
+[![Build Status](https://img.shields.io/travis/ConnorVG/Cachet-Metrics-Plugin/develop.svg?style=flat-square)](https://travis-ci.org/ConnorVG/Cachet-Metrics-Plugin)
 [![Software License](https://img.shields.io/badge/license-BSD3-brightgreen.svg?style=flat-square)](LICENSE)
-[![Packagist](https://img.shields.io/packagist/v/connorvg/cachet-demo-plugin.svg?style=flat-square)](https://packagist.org/packages/connorvg/cachet-demo-plugin)
+[![Packagist](https://img.shields.io/packagist/v/connorvg/cachet-metrics-plugin.svg?style=flat-square)](https://packagist.org/packages/connorvg/cachet-metrics-plugin)
 
 ## Requirements
 
