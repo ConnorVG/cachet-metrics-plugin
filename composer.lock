@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dea374427e3146bbb3d46880977be8ca",
-    "content-hash": "399a4cb06320e0531981e5ed55f53305",
+    "hash": "7f9331931016282c8aaf9c95288f4709",
+    "content-hash": "ec166009647658254a6b05b2cf25e6d9",
     "packages": [
         {
             "name": "alt-three/badger",
@@ -622,11 +622,17 @@
         },
         {
             "name": "cachethq/cachet",
-            "version": "v2.3.9",
+            "version": "dev-composer-plugins",
             "source": {
                 "type": "git",
-                "url": "git@github.com:connorvg/cachet",
-                "reference": "57988f00090c88265819141bca3d79f59a1907aa"
+                "url": "https://github.com/ConnorVG/Cachet.git",
+                "reference": "8ede81a0728ff69dd899713e6620b7f711f1f12e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ConnorVG/Cachet/zipball/8ede81a0728ff69dd899713e6620b7f711f1f12e",
+                "reference": "8ede81a0728ff69dd899713e6620b7f711f1f12e",
+                "shasum": ""
             },
             "require": {
                 "alt-three/badger": "^3.1",
@@ -637,6 +643,7 @@
                 "aws/aws-sdk-php": "^3.7",
                 "backup-manager/laravel": "^1.1",
                 "barryvdh/laravel-cors": "^0.8",
+                "composer/semver": "~1.4.1",
                 "doctrine/dbal": "^2.5",
                 "ext-xml": "*",
                 "fedeisas/laravel-mail-css-inliner": "^1.5",
@@ -647,15 +654,16 @@
                 "graham-campbell/markdown": "^6.1",
                 "guzzlehttp/guzzle": "^6.2.1",
                 "jenssegers/date": "^3.2",
-                "laravel/framework": "5.2.39",
+                "laravel/framework": "5.2.42",
                 "mccool/laravel-auto-presenter": "^4.3",
                 "php": ">=5.5.9",
                 "pragmarx/google2fa": "^0.7.1",
                 "rcrowe/twigbridge": "^0.9.2",
-                "roumen/feed": "^2.10.4"
+                "roumen/feed": "^2.10.4",
+                "wikimedia/composer-merge-plugin": "~1.3.1"
             },
             "require-dev": {
-                "alt-three/testbench": "^1.7",
+                "alt-three/testbench": "^1.8",
                 "filp/whoops": "^2.1",
                 "fzaninotto/faker": "^1.6",
                 "graham-campbell/testbench-core": "^1.1",
@@ -667,7 +675,15 @@
             "type": "project",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
+                },
+                "merge-plugin": {
+                    "include": [
+                        "plugins/enabled/*/*/composer.json"
+                    ],
+                    "recurse": true,
+                    "replace": false,
+                    "merge-dev": false
                 }
             },
             "autoload": {
@@ -732,7 +748,10 @@
                 "page",
                 "status"
             ],
-            "time": "2016-08-07 21:05:16"
+            "support": {
+                "source": "https://github.com/ConnorVG/Cachet/tree/composer-plugins"
+            },
+            "time": "2016-08-14 14:29:50"
         },
         {
             "name": "christian-riesen/base32",
@@ -841,6 +860,68 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "composer/semver",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/semver.git",
+                "reference": "03c9de5aa25e7672c4ad251eeaba0c47a06c8b98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/semver/zipball/03c9de5aa25e7672c4ad251eeaba0c47a06c8b98",
+                "reference": "03c9de5aa25e7672c4ad251eeaba0c47a06c8b98",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5 || ^5.0.5",
+                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Semver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
+                }
+            ],
+            "description": "Semver library that offers utilities, version constraint parsing and validation.",
+            "keywords": [
+                "semantic",
+                "semver",
+                "validation",
+                "versioning"
+            ],
+            "time": "2016-06-02 09:04:51"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2133,16 +2214,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.39",
+            "version": "v5.2.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c2a77050269b4e03bd9a735a9f24e573a7598b8a"
+                "reference": "d1bf46f359d2ede2d4ef847fb79d3758d868f2b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c2a77050269b4e03bd9a735a9f24e573a7598b8a",
-                "reference": "c2a77050269b4e03bd9a735a9f24e573a7598b8a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d1bf46f359d2ede2d4ef847fb79d3758d868f2b7",
+                "reference": "d1bf46f359d2ede2d4ef847fb79d3758d868f2b7",
                 "shasum": ""
             },
             "require": {
@@ -2199,7 +2280,8 @@
                 "illuminate/support": "self.version",
                 "illuminate/translation": "self.version",
                 "illuminate/validation": "self.version",
-                "illuminate/view": "self.version"
+                "illuminate/view": "self.version",
+                "tightenco/collect": "self.version"
             },
             "require-dev": {
                 "aws/aws-sdk-php": "~3.0",
@@ -2258,7 +2340,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-06-17 19:25:12"
+            "time": "2016-08-08 13:39:44"
         },
         {
             "name": "league/commonmark",
@@ -4219,6 +4301,55 @@
                 "environment"
             ],
             "time": "2016-06-14 14:14:52"
+        },
+        {
+            "name": "wikimedia/composer-merge-plugin",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "reference": "0bdf8543d445ee067c9ba7d5d4a5dde70b9785f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/0bdf8543d445ee067c9ba7d5d4a5dde70b9785f4",
+                "reference": "0bdf8543d445ee067c9ba7d5d4a5dde70b9785f4",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "jakub-onderka/php-parallel-lint": "~0.8",
+                "phpunit/phpunit": "~4.8|~5.0",
+                "squizlabs/php_codesniffer": "~2.1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                },
+                "class": "Wikimedia\\Composer\\MergePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Davis",
+                    "email": "bd808@wikimedia.org"
+                }
+            ],
+            "description": "Composer plugin to merge multiple composer.json files",
+            "time": "2016-03-08 17:11:37"
         }
     ],
     "packages-dev": [
@@ -5726,7 +5857,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "cachethq/cachet": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

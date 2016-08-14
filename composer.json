@@ -29,12 +29,12 @@
     },
     "repositories": [
         {
-            "type": "git",
-            "url": "git@github.com:connorvg/cachet"
+            "type": "vcs",
+            "url": "https://github.com/ConnorVG/Cachet"
         }
     ],
     "require": {
-        "cachethq/cachet": "*"
+        "cachethq/cachet": "dev-composer-plugins"
     },
     "require-dev": {
         "alt-three/testbench": "^1.8",
