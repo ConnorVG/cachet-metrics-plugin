@@ -1,0 +1,57 @@
+{
+    "name": "connorvg/cachet-demo-plugin",
+    "description": "A metrics plugin for Cachet.",
+    "keywords": ["laravel", "cachet", "alt-three", "status", "page", "metrics"],
+    "type": "cachet-plugin",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "James Brooks",
+            "email": "james@alt-three.com"
+        },
+        {
+            "name": "Graham Campbell",
+            "email": "graham@alt-three.com"
+        },
+        {
+            "name": "Joseph Cohen",
+            "email": "joe@alt-three.com"
+        },
+        {
+            "name": "Connor S. Parks",
+            "email": "connor@connorvg.tv"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CachetHQ\\Plugins\\Metrics\\": "plugin/"
+        }
+    },
+    "require": {
+        "cachethq/cachet": "~2.4-dev"
+    },
+    "require-dev": {
+        "alt-three/testbench": "^1.8",
+        "graham-campbell/testbench-core": "^1.1",
+        "mockery/mockery": "0.9.5",
+        "phpunit/phpunit": "4.8.21"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CachetHQ\\Tests\\Plugins\\Metrics\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "5.5.9"
+        },
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
