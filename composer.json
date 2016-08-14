@@ -1,5 +1,5 @@
 {
-    "name": "connorvg/cachet-demo-plugin",
+    "name": "connorvg/cachet-metrics-plugin",
     "description": "A metrics plugin for Cachet.",
     "keywords": ["laravel", "cachet", "alt-three", "status", "page", "metrics"],
     "type": "cachet-plugin",
