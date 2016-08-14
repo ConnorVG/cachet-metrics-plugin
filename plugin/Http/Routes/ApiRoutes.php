@@ -29,6 +29,21 @@ class ApiRoutes
      */
     public function map(Registrar $router)
     {
-        // ...
+        $router->group(['namespace' => 'Api', 'prefix' => 'api/v1', 'middleware' => ['api']], function (Registrar $router) {
+            $router->group(['middleware' => ['auth.api']], function (Registrar $router) {
+                $router->get('metrics', 'MetricController@getMetrics');
+                $router->get('metrics/{metric}', 'MetricController@getMetric');
+                $router->get('metrics/{metric}/points', 'MetricController@getMetricPoints');
+            });
+
+            $router->group(['middleware' => ['auth.api:true']], function (Registrar $router) {
+                $router->post('metrics', 'MetricController@postMetrics');
+                $router->post('metrics/{metric}/points', 'MetricPointController@postMetricPoints');
+                $router->put('metrics/{metric}', 'MetricController@putMetric');
+                $router->put('metrics/{metric}/points/{metric_point}', 'MetricPointController@putMetricPoint');
+                $router->delete('metrics/{metric}', 'MetricController@deleteMetric');
+                $router->delete('metrics/{metric}/points/{metric_point}', 'MetricPointController@deleteMetricPoint');
+            });
+        });
     }
 }

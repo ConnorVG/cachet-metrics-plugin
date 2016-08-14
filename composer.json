@@ -23,18 +23,31 @@
         }
     ],
     "autoload": {
+        "classmap": [
+            "database"
+        ],
         "psr-4": {
             "CachetHQ\\Plugins\\Metrics\\": "plugin/"
         }
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:connorvg/cachet"
+        }
+    ],
     "require": {
-        "cachethq/cachet": "~2.4-dev"
+        "cachethq/cachet": "*"
     },
     "require-dev": {
         "alt-three/testbench": "^1.8",
+        "filp/whoops": "^2.1",
+        "fzaninotto/faker": "^1.6",
         "graham-campbell/testbench-core": "^1.1",
         "mockery/mockery": "0.9.5",
-        "phpunit/phpunit": "4.8.21"
+        "phpunit/phpunit": "4.8.21",
+        "symfony/css-selector": "^3.0",
+        "symfony/dom-crawler": "^3.0"
     },
     "autoload-dev": {
         "psr-4": {
