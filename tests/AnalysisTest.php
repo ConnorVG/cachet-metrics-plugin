@@ -26,7 +26,7 @@ class AnalysisTest extends TestCase
     protected function getPaths()
     {
         return [
-            realpath(__DIR__.'/../app'),
+            realpath(__DIR__.'/../plugin'),
             realpath(__DIR__.'/../config'),
             realpath(__DIR__.'/../migrations'),
             realpath(__DIR__),
